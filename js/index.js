@@ -36,7 +36,6 @@ Shery.imageEffect(".images", {
         });
     },
 });
-
 // function locomotive() {
 //     gsap.registerPlugin(ScrollTrigger);
 

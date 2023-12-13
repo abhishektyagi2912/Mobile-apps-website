@@ -50,6 +50,24 @@ main {
     color: black;
     font-size: 1.1vw;
     font-weight: 500;
+    position: relative;
+}
+
+#nav a span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+#nav a:hover span {
+    transform: scaleX(1);
+    transform-origin: left;
 }
 
 #nav i {
@@ -81,7 +99,7 @@ main {
     line-height: 1;
 }
 
-#homemain .headings h1:hover{
+#homemain .headings h1:hover {
     color: black;
 }
 
@@ -193,6 +211,12 @@ main {
     font-weight: 500;
     letter-spacing: -1.1px;
     cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Add transition for a smooth effect */
+}
+
+.btndiv button:hover {
+    background-color: black;
+    color: white;
 }
 
 #dev {
@@ -249,4 +273,63 @@ main {
     font-size: 1.5vw;
     font-weight: 400;
     letter-spacing: -.5px;
+}
+
+body::-webkit-scrollbar {
+    width: 7px;
+}
+
+body::-webkit-scrollbar-track {
+    background: white;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: gray;
+    border-radius: 10px;
+    border: none;
+}
+
+#footer {
+    display: flex;
+    margin-top: 5vh;
+    justify-content: space-between;
+    padding: 1vw 10vw;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(2, 2, 2);
+}
+
+#footer p {
+    color: white;
+    font-weight: 400;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: oblique;
+}
+
+#footer #footerRight {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-link {
+    position: relative;
+    cursor: pointer;
+}
+
+.social-link span {
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.social-link:hover span {
+    transform: scaleX(1);
+    transform-origin: left;
 }
