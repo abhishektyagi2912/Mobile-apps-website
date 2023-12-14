@@ -333,3 +333,30 @@ body::-webkit-scrollbar-thumb {
     transform: scaleX(1);
     transform-origin: left;
 }
+
+#mobile-warning {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    color: #333;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#mobile-warning p {
+    margin: 0;
+}
+
+@media (max-width: 1000px) {
+    #mobile-warning {
+        display: block;
+        opacity: 1;
+    }
+}
